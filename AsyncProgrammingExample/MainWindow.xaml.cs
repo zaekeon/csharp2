@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,10 +27,31 @@ namespace AsyncProgrammingExample
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private async void button_Click(object sender, RoutedEventArgs e)
         {
-            DownloadHtmlAsync("http://msdn.microsoft.com");
+            //DownloadHtmlAsync("http://msdn.microsoft.com");
+
+            var html = await GetHtmlAsync("http://msdn.microsoft.com");
+            MessageBox.Show(html.Substring(0, 10));
+
         }
+
+        
+
+        public string GetHtml(string url)
+        {
+            var webClient = new WebClient();
+
+            return webClient.DownloadString(url);
+        }
+
+        public async Task<string> GetHtmlAsync(string url)
+        {
+            var webClient = new WebClient();
+             return await webClient.DownloadStringTaskAsync(url);
+        }
+
+
 
         public void DownloadHtml(string url)
         {
