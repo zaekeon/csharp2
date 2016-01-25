@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesAgain", "Delegates
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonymousFunctions", "AnonymousFunctions\AnonymousFunctions.csproj", "{EC6946E1-346C-448E-92BF-36324CC151EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnotherAnonymous", "AnotherAnonymous\AnotherAnonymous.csproj", "{47BCBB67-E978-4766-8BD2-CE7DE86C87E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +149,10 @@ Global
 		{EC6946E1-346C-448E-92BF-36324CC151EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC6946E1-346C-448E-92BF-36324CC151EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC6946E1-346C-448E-92BF-36324CC151EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47BCBB67-E978-4766-8BD2-CE7DE86C87E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47BCBB67-E978-4766-8BD2-CE7DE86C87E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47BCBB67-E978-4766-8BD2-CE7DE86C87E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47BCBB67-E978-4766-8BD2-CE7DE86C87E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
