@@ -21,8 +21,16 @@ namespace Dictionary
 
             //search for certfications by key and confirm
 
+            string theValue;
+            //try get value
+            //uses the out 
+            certifications.TryGetValue('H', out theValue);
+            Console.WriteLine(theValue);
+
+
             if (certifications.ContainsKey('P'))
                 Console.WriteLine("Has certfication 'P'");
+          
 
             //check certification for a specific value and confirm
             if (certifications.ContainsValue("Double/Triple trailers"))
