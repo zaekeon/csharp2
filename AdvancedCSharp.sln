@@ -45,6 +45,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictionaryExercise", "Dicti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hashtable Exercise", "HashTableExercrise\Hashtable Exercise.csproj", "{F390CE35-E8C4-423B-9D13-3B08760AA67F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesAgain", "DelegatesAgain\DelegatesAgain.csproj", "{A2CBA34B-7A42-4D97-B68C-E746A4C639C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnonymousFunctions", "AnonymousFunctions\AnonymousFunctions.csproj", "{EC6946E1-346C-448E-92BF-36324CC151EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +139,14 @@ Global
 		{F390CE35-E8C4-423B-9D13-3B08760AA67F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F390CE35-E8C4-423B-9D13-3B08760AA67F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F390CE35-E8C4-423B-9D13-3B08760AA67F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2CBA34B-7A42-4D97-B68C-E746A4C639C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2CBA34B-7A42-4D97-B68C-E746A4C639C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2CBA34B-7A42-4D97-B68C-E746A4C639C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2CBA34B-7A42-4D97-B68C-E746A4C639C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC6946E1-346C-448E-92BF-36324CC151EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC6946E1-346C-448E-92BF-36324CC151EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC6946E1-346C-448E-92BF-36324CC151EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC6946E1-346C-448E-92BF-36324CC151EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
