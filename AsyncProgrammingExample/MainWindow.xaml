@@ -8,6 +8,19 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="138,124,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="269,124,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="517">
+            <Button Content="CowsFart" Height="16" ToolTip="Cows" Width="128">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Menu>
+        <WebBrowser HorizontalAlignment="Left" Height="100" Margin="84,217,0,0" VerticalAlignment="Top" Width="100" Source="{x:Null}"/>
+        <Canvas HorizontalAlignment="Left" Height="100" Margin="21,44,0,0" VerticalAlignment="Top" Width="100" MouseDown="Canvas_MouseDown"/>
 
     </Grid>
 </Window>

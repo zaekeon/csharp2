@@ -80,5 +80,20 @@ namespace AsyncProgrammingExample
 
 
         }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            DateTime today = DateTime.Now;
+            DateTime vault = new DateTime(2015, 10, 27);
+
+            TimeSpan amountOfTime = today - vault;
+
+            MessageBox.Show(Convert.ToString(amountOfTime.TotalDays));
+        }
+
+        private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
     }
 }
