@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoreGenerics
 {
-    public class QuizQuestion<T>
+    public class QuizQuestion<T> 
     {
         public T Answer { get; private set; }
 
