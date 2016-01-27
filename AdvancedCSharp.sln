@@ -63,6 +63,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinSCPExample", "WinSCPExam
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionExample", "ReflectionExample\ReflectionExample.csproj", "{F471FF4F-2804-47E0-9DBA-98408F91A61E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreEvents", "MoreEvents\MoreEvents.csproj", "{CCFD86AF-A535-40F4-A204-6C61FC15B712}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -189,6 +191,10 @@ Global
 		{F471FF4F-2804-47E0-9DBA-98408F91A61E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F471FF4F-2804-47E0-9DBA-98408F91A61E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F471FF4F-2804-47E0-9DBA-98408F91A61E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCFD86AF-A535-40F4-A204-6C61FC15B712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCFD86AF-A535-40F4-A204-6C61FC15B712}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCFD86AF-A535-40F4-A204-6C61FC15B712}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCFD86AF-A535-40F4-A204-6C61FC15B712}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
