@@ -65,6 +65,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReflectionExample", "Reflec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreEvents", "MoreEvents\MoreEvents.csproj", "{CCFD86AF-A535-40F4-A204-6C61FC15B712}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreLambda", "MoreLambda\MoreLambda.csproj", "{20C897D9-9008-4B1A-8E49-C0CFED102A19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryCatch", "TryCatch\TryCatch.csproj", "{F1B8025E-E9FF-404C-875E-086B6710DC99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -195,6 +199,14 @@ Global
 		{CCFD86AF-A535-40F4-A204-6C61FC15B712}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCFD86AF-A535-40F4-A204-6C61FC15B712}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCFD86AF-A535-40F4-A204-6C61FC15B712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20C897D9-9008-4B1A-8E49-C0CFED102A19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20C897D9-9008-4B1A-8E49-C0CFED102A19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20C897D9-9008-4B1A-8E49-C0CFED102A19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20C897D9-9008-4B1A-8E49-C0CFED102A19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1B8025E-E9FF-404C-875E-086B6710DC99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B8025E-E9FF-404C-875E-086B6710DC99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B8025E-E9FF-404C-875E-086B6710DC99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B8025E-E9FF-404C-875E-086B6710DC99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
