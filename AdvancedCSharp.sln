@@ -81,6 +81,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethodPattern", "Fac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyFactoryExample", "ToyFactoryExample\ToyFactoryExample.csproj", "{1AC752BB-3BA8-4D6F-A1EA-A5AE1196022B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreInterfaces", "MoreInterfaces\MoreInterfaces.csproj", "{B9FA33D3-8607-4210-B2FB-2E20FB41DD9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraysAndOverloads", "ArraysAndOverloads\ArraysAndOverloads.csproj", "{5D2A0C9C-1A30-417D-A1E0-DD5908741696}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -397,6 +401,22 @@ Global
 		{1AC752BB-3BA8-4D6F-A1EA-A5AE1196022B}.Release|Any CPU.ActiveCfg = Release|x86
 		{1AC752BB-3BA8-4D6F-A1EA-A5AE1196022B}.Release|x86.ActiveCfg = Release|x86
 		{1AC752BB-3BA8-4D6F-A1EA-A5AE1196022B}.Release|x86.Build.0 = Release|x86
+		{B9FA33D3-8607-4210-B2FB-2E20FB41DD9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9FA33D3-8607-4210-B2FB-2E20FB41DD9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9FA33D3-8607-4210-B2FB-2E20FB41DD9A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B9FA33D3-8607-4210-B2FB-2E20FB41DD9A}.Debug|x86.Build.0 = Debug|Any CPU
+		{B9FA33D3-8607-4210-B2FB-2E20FB41DD9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9FA33D3-8607-4210-B2FB-2E20FB41DD9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9FA33D3-8607-4210-B2FB-2E20FB41DD9A}.Release|x86.ActiveCfg = Release|Any CPU
+		{B9FA33D3-8607-4210-B2FB-2E20FB41DD9A}.Release|x86.Build.0 = Release|Any CPU
+		{5D2A0C9C-1A30-417D-A1E0-DD5908741696}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D2A0C9C-1A30-417D-A1E0-DD5908741696}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D2A0C9C-1A30-417D-A1E0-DD5908741696}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5D2A0C9C-1A30-417D-A1E0-DD5908741696}.Debug|x86.Build.0 = Debug|Any CPU
+		{5D2A0C9C-1A30-417D-A1E0-DD5908741696}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D2A0C9C-1A30-417D-A1E0-DD5908741696}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D2A0C9C-1A30-417D-A1E0-DD5908741696}.Release|x86.ActiveCfg = Release|Any CPU
+		{5D2A0C9C-1A30-417D-A1E0-DD5908741696}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
