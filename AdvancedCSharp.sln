@@ -85,6 +85,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoreInterfaces", "MoreInter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraysAndOverloads", "ArraysAndOverloads\ArraysAndOverloads.csproj", "{5D2A0C9C-1A30-417D-A1E0-DD5908741696}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumExample", "EnumExample\EnumExample.csproj", "{661E0A37-64D0-437A-984A-E842B4757DDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -417,6 +419,14 @@ Global
 		{5D2A0C9C-1A30-417D-A1E0-DD5908741696}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5D2A0C9C-1A30-417D-A1E0-DD5908741696}.Release|x86.ActiveCfg = Release|Any CPU
 		{5D2A0C9C-1A30-417D-A1E0-DD5908741696}.Release|x86.Build.0 = Release|Any CPU
+		{661E0A37-64D0-437A-984A-E842B4757DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{661E0A37-64D0-437A-984A-E842B4757DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{661E0A37-64D0-437A-984A-E842B4757DDC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{661E0A37-64D0-437A-984A-E842B4757DDC}.Debug|x86.Build.0 = Debug|Any CPU
+		{661E0A37-64D0-437A-984A-E842B4757DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{661E0A37-64D0-437A-984A-E842B4757DDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{661E0A37-64D0-437A-984A-E842B4757DDC}.Release|x86.ActiveCfg = Release|Any CPU
+		{661E0A37-64D0-437A-984A-E842B4757DDC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
