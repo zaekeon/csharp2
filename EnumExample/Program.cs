@@ -14,6 +14,8 @@ namespace EnumExample
             Console.WriteLine(Cow.Milk);
             Func<int,int> cheese = x => x + 1;
             int cowFiber = cheese(4);
+
+            
         }
     }
 }

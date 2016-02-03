@@ -87,6 +87,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraysAndOverloads", "Array
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumExample", "EnumExample\EnumExample.csproj", "{661E0A37-64D0-437A-984A-E842B4757DDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOTO Tracker", "OOTO Tracker\OOTO Tracker.csproj", "{304BE6E6-65AD-4BB4-821B-A11735311BF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -427,6 +429,14 @@ Global
 		{661E0A37-64D0-437A-984A-E842B4757DDC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{661E0A37-64D0-437A-984A-E842B4757DDC}.Release|x86.ActiveCfg = Release|Any CPU
 		{661E0A37-64D0-437A-984A-E842B4757DDC}.Release|x86.Build.0 = Release|Any CPU
+		{304BE6E6-65AD-4BB4-821B-A11735311BF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{304BE6E6-65AD-4BB4-821B-A11735311BF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{304BE6E6-65AD-4BB4-821B-A11735311BF3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{304BE6E6-65AD-4BB4-821B-A11735311BF3}.Debug|x86.Build.0 = Debug|Any CPU
+		{304BE6E6-65AD-4BB4-821B-A11735311BF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{304BE6E6-65AD-4BB4-821B-A11735311BF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{304BE6E6-65AD-4BB4-821B-A11735311BF3}.Release|x86.ActiveCfg = Release|Any CPU
+		{304BE6E6-65AD-4BB4-821B-A11735311BF3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
