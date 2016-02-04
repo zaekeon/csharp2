@@ -45,8 +45,8 @@ namespace GoogleAuthTokenGenerator
                     //Display the original data and the decrypted data.
                    
 
-                    MessageBox.Show("Original:   {0}", original);
-                    MessageBox.Show("Round Trip: {0}", roundtrip);
+                    MessageBox.Show("Original:   " + original);
+                    MessageBox.Show("Round Trip: " + roundtrip);
 
                 }
 
