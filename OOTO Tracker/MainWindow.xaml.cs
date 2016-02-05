@@ -77,6 +77,12 @@ namespace OOTO_Tracker
 
         private void DisplayDayDetails()
         {
+
+            if (listDays.SelectedIndex == -1)
+            {
+                return;
+            }
+
             textConsole.Clear();
        
         
@@ -92,7 +98,7 @@ namespace OOTO_Tracker
         {
 
             //Error Prevention
-            if (listDays.SelectedIndex == -1)
+            if (listBox.SelectedIndex == -1)
             {
                 return;
             }
@@ -112,6 +118,8 @@ namespace OOTO_Tracker
 
             AllUsers._users.Add(new Person(textBox1.Text, textBox.Text));
             listBox.Items.Add(textBox.Text + " " + textBox1.Text);
+            textBox1.Clear();
+            textBox.Clear();
 
 
         }
@@ -120,11 +128,20 @@ namespace OOTO_Tracker
         {
             
             UpdateDaysBox();
+            UpdateTotalOOTOTime();
         }
 
         private void listDays_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             DisplayDayDetails();
+        }
+
+        private void UpdateTotalOOTOTime()
+        {
+            Person tempPerson;
+            tempPerson = AllUsers._users[listBox.SelectedIndex];
+
+            lblTotalTime.Content = "Total Time OOTO: " + tempPerson.GetTotalTimeOff();
         }
     }
 }
