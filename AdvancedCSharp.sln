@@ -95,6 +95,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USAdmin", "USAdmin\USAdmin.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleAuthTokenGenerator", "GoogleAuthTokenGenerator\GoogleAuthTokenGenerator.csproj", "{6F1C51EC-CF15-4C2F-BBA1-10FACB4255A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPServer01", "TCPServer01\TCPServer01.csproj", "{5A65D7E0-9D85-40B9-8D8E-ACD76A49567F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solid", "Solid\Solid.csproj", "{A0931496-1918-40AA-8F94-49F7B810DE31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -467,6 +471,22 @@ Global
 		{6F1C51EC-CF15-4C2F-BBA1-10FACB4255A0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6F1C51EC-CF15-4C2F-BBA1-10FACB4255A0}.Release|x86.ActiveCfg = Release|Any CPU
 		{6F1C51EC-CF15-4C2F-BBA1-10FACB4255A0}.Release|x86.Build.0 = Release|Any CPU
+		{5A65D7E0-9D85-40B9-8D8E-ACD76A49567F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A65D7E0-9D85-40B9-8D8E-ACD76A49567F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A65D7E0-9D85-40B9-8D8E-ACD76A49567F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5A65D7E0-9D85-40B9-8D8E-ACD76A49567F}.Debug|x86.Build.0 = Debug|Any CPU
+		{5A65D7E0-9D85-40B9-8D8E-ACD76A49567F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A65D7E0-9D85-40B9-8D8E-ACD76A49567F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A65D7E0-9D85-40B9-8D8E-ACD76A49567F}.Release|x86.ActiveCfg = Release|Any CPU
+		{5A65D7E0-9D85-40B9-8D8E-ACD76A49567F}.Release|x86.Build.0 = Release|Any CPU
+		{A0931496-1918-40AA-8F94-49F7B810DE31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0931496-1918-40AA-8F94-49F7B810DE31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0931496-1918-40AA-8F94-49F7B810DE31}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A0931496-1918-40AA-8F94-49F7B810DE31}.Debug|x86.Build.0 = Debug|Any CPU
+		{A0931496-1918-40AA-8F94-49F7B810DE31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0931496-1918-40AA-8F94-49F7B810DE31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0931496-1918-40AA-8F94-49F7B810DE31}.Release|x86.ActiveCfg = Release|Any CPU
+		{A0931496-1918-40AA-8F94-49F7B810DE31}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

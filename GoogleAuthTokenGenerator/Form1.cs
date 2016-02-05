@@ -12,6 +12,8 @@ using System.IO;
 
 
 
+
+
 namespace GoogleAuthTokenGenerator
 {
     public partial class Form1 : Form
@@ -26,7 +28,7 @@ namespace GoogleAuthTokenGenerator
             try
             {
 
-                string original = "Here is some data to encrypt!";
+                string original = "KYZHISLYOFKHKYKV";
 
                 // Create a new instance of the RijndaelManaged 
                 // class.  This generates a new key and initialization  
@@ -36,17 +38,51 @@ namespace GoogleAuthTokenGenerator
 
                     myRijndael.GenerateKey();
                     myRijndael.GenerateIV();
-                    // Encrypt the string to an array of bytes. 
-                    byte[] encrypted = EncryptStringToBytes(original, myRijndael.Key, myRijndael.IV);
 
+                    string strKey = "2D1355A9D21CCD04D89BE2C1C61C2C3A";
+                    string strIV = "65C906B3BF25EE958FE5A663E907E533";
+
+                    
+                    
+
+                    byte[] key2 = Encoding.ASCII.GetBytes(strKey);
+                    byte[] iv2 = Encoding.ASCII.GetBytes(strIV);
+
+                   
+
+                    
+                    
+                   
+
+                    // Encrypt the string to an array of bytes. 
+                    byte[] encrypted = EncryptStringToBytes(original, key2, iv2);
+
+                    string encrypted2 = EncryptStringToString(original, key2, iv2);
                     // Decrypt the bytes to a string. 
-                    string roundtrip = DecryptStringFromBytes(encrypted, myRijndael.Key, myRijndael.IV);
+                    string roundtrip = DecryptStringFromBytes(encrypted, key2, iv2);
 
                     //Display the original data and the decrypted data.
                    
 
                     MessageBox.Show("Original:   " + original);
+                    MessageBox.Show("Encrypted: " + encrypted2);
                     MessageBox.Show("Round Trip: " + roundtrip);
+
+                    string unencryptedByteValue = System.Convert.ToBase64String(encrypted);
+
+                       
+
+                    MessageBox.Show("Unencrypted Byte:" + unencryptedByteValue);
+
+                    string unecrypted3 = convertToBase32(encrypted);
+
+                    MessageBox.Show("base32" + unecrypted3);
+
+                    txtOutput.Clear();
+                    foreach (var item in encrypted)
+                    {
+                        txtOutput.AppendText(item.ToString());  
+                    }
 
                 }
 
@@ -55,6 +91,18 @@ namespace GoogleAuthTokenGenerator
             {
                 Console.WriteLine("Error: {0}", ex.Message);
             }
+        }
+
+        private string convertToBase32(byte[] input)
+        {
+            string output;
+
+            Base32Encoder base32 = new Base32Encoder();
+
+            output = base32.Encode(input);
+
+            return output;
+
         }
 
 
@@ -142,6 +190,49 @@ namespace GoogleAuthTokenGenerator
             }
 
             return plaintext;
+
+        }
+
+
+        static string EncryptStringToString(string plainText, byte[] Key, byte[] IV)
+        {
+            // Check arguments. 
+            if (plainText == null || plainText.Length <= 0)
+                throw new ArgumentNullException("plainText");
+            if (Key == null || Key.Length <= 0)
+                throw new ArgumentNullException("Key");
+            if (IV == null || IV.Length <= 0)
+                throw new ArgumentNullException("IV");
+            string encrypted;
+            // Create an RijndaelManaged object 
+            // with the specified key and IV. 
+            using (RijndaelManaged rijAlg = new RijndaelManaged())
+            {
+                rijAlg.Key = Key;
+                rijAlg.IV = IV;
+
+                // Create a decryptor to perform the stream transform.
+                ICryptoTransform encryptor = rijAlg.CreateEncryptor(rijAlg.Key, rijAlg.IV);
+
+                // Create the streams used for encryption. 
+                using (MemoryStream msEncrypt = new MemoryStream())
+                {
+                    using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                    {
+                        using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                        {
+
+                            //Write all data to the stream.
+                            swEncrypt.Write(plainText);
+                        }
+                        encrypted = Convert.ToBase64String(msEncrypt.ToArray());
+                    }
+                }
+            }
+
+
+            // Return the encrypted bytes from the memory stream. 
+            return encrypted;
 
         }
 

@@ -88,9 +88,10 @@
             // 
             // txtOutput
             // 
-            this.txtOutput.Location = new System.Drawing.Point(241, 132);
+            this.txtOutput.Location = new System.Drawing.Point(44, 249);
+            this.txtOutput.Multiline = true;
             this.txtOutput.Name = "txtOutput";
-            this.txtOutput.Size = new System.Drawing.Size(100, 20);
+            this.txtOutput.Size = new System.Drawing.Size(519, 91);
             this.txtOutput.TabIndex = 6;
             // 
             // Form1
