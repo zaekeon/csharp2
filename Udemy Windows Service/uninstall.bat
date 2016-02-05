@@ -1,0 +1,1 @@
+sc.exe delete "Udemy Windows Service"
