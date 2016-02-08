@@ -11,6 +11,10 @@ namespace StringFormats
     {
         static void Main(string[] args)
         {
+
+            Ex2();  //call exercise method
+
+
             //numeric format specifiers
 
             //Raw text
@@ -204,6 +208,32 @@ namespace StringFormats
             ShowValidStatus(PATTERN4, "Pears");
             ShowValidStatus(PATTERN4, "Lemons");
 
+            //my attempt at first and last name validator...checks for capital letter at first name and last name with space in the middle.
+            const string PATTERN5 = @"([A-Z]*)(\s[A-Z]*)";
+            Regex reg4 = new Regex(PATTERN5);
+
+            bool result4 = reg4.IsMatch("Joey Polarmo");
+            Console.WriteLine("result4 value is: " + result4);
+
+            //format conversions
+
+            decimal decimalValue = Convert.ToDecimal("10.5");
+            float floatValue = Convert.ToSingle("10.5");
+
+            //etc
+
+            int intValue;
+            bool success = int.TryParse("hello", out intValue); //does not return an int
+
+            success = float.TryParse("10.5", out floatValue);  //assigns floatValue to 10.5 since it will parse successfully.
+
+
+
+
+            
+
+
+
 
 
 
@@ -248,6 +278,39 @@ namespace StringFormats
 
             Console.WriteLine(balance);
 
+
+
+        }
+
+        private static void Ex2()
+        {
+            string fullName = "Eric Johnson";
+            char lastLetter = fullName[fullName.Length - 1];
+            Console.WriteLine("The value of lastLetter is: " + lastLetter);
+
+
+
+            string testName = "Jeffrey steinberg";
+
+            int indexOfLastName = testName.IndexOf(" ") + 1;
+
+            string lastNameOfTestName = testName.Substring(indexOfLastName);
+
+            Console.WriteLine("The last name is: " + lastNameOfTestName);
+
+
+            //validates the test email address
+            string pattern = @"([A-Za-z0-9]*)@([A-Za-z0-9]*)\.(com)";
+            string email = "joey@joeyb.com";
+            Regex regex1 = new Regex(pattern);
+
+            Console.WriteLine(regex1.IsMatch(email));
+
+            string pattern2 = @"(Cable)|(DSL)";
+
+            Regex regex2 = new Regex(pattern2);
+            string validateMe = "Cable";
+            Console.WriteLine("validation is: " + regex2.IsMatch(validateMe));
 
 
         }
