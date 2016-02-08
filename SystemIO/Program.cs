@@ -27,7 +27,47 @@ namespace SystemIO
 
             ListFiles(files);
             StreamReaderExample();
+            StreamWriterExample();
+            StreamWriter2Example();
 
+
+
+        }
+
+        private static void StreamReader2Example()
+        {
+            const string FILE_PATH = "../../Budget.csv";
+        }
+
+        private static void StreamWriter2Example()
+        {
+            const string FILE_PATH = "../../Budget.csv";
+            WriteToFile(FILE_PATH);
+            
+        }
+
+        private static void WriteToFile(string path)
+        {
+            const bool APPEND = true;
+            try
+            {
+                //create writer to add or append to a file.
+                using (StreamWriter sw = new StreamWriter(path, !APPEND))
+                {
+                    sw.WriteLine("Category, Transation Amount, Balance");
+                    sw.WriteLine("Food, 123.45, 220.98");
+                    sw.WriteLine("Phone, 40.00, 180.98");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Write Error: " + e.Message);
+            }
+        }
+            
+
+        private static void StreamWriterExample()
+        {
             //writing
             //a writer can write text or other formats of data
             //there are several overloads for each data type.
@@ -39,19 +79,19 @@ namespace SystemIO
             using (StreamWriter writer = new StreamWriter(@"c:\projects\test.txt"))
             {
                 string input = Console.ReadLine();
-                while (input.Trim().Length !=0)
+                while (input.Trim().Length != 0)
                 {
                     writer.WriteLine(input);
                     input = Console.ReadLine();
                 }
             }
-
         }
 
         private static void StreamReaderExample()
         {
             //streams
-            //you can make a stream manually or you can grab one from another object such as File.
+            //you can make a stream manually from a filestream or you can grab one from another object such as File.
+            //you could also just make a streamreader manually using a path.
 
             //this try block is just here for demo. You'd want to use the USING method in a real application.
             try
