@@ -11,6 +11,10 @@ namespace SystemIO
     {
         static void Main(string[] args)
         {
+
+            WriteToCSV();
+            ReadFromCSV();
+
             CreateFile();
 
             //create a directory
@@ -29,14 +33,103 @@ namespace SystemIO
             StreamReaderExample();
             StreamWriterExample();
             StreamWriter2Example();
+            StreamReader2Example();
 
 
 
         }
 
+        private static void WriteToCSV()
+        {
+            const string FILE_PATH = @"c:\projects\mycsv.csv";
+
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(FILE_PATH, true))
+                {
+                    sw.WriteLine("Monthly Sales,Amount");
+                    sw.WriteLine("August,23333.25");
+                    sw.WriteLine("September,18323.22");
+                    sw.WriteLine("October,13344.23");
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("Error Writing to freaking file!!!!!!!" + e.Message);
+            }
+        }
+
+        private static void ReadFromCSV()
+        {
+            const string FILE_PATH = @"c:\projects\mycsv.csv";
+            double sum = 0;
+
+            try
+            {
+                using (StreamReader reader = new StreamReader(FILE_PATH))
+                {
+
+                    while (!reader.EndOfStream)
+                    {
+                        string line = reader.ReadLine();
+                        Console.WriteLine("Line content: " + line);
+
+                        string[] contents = line.Split(',');
+                        foreach (string item in contents)
+                        {
+
+                            double intValue;
+                            bool success = double.TryParse(item, out intValue);
+                            if (success)
+                            {
+                                sum += intValue;
+                            }
+                            Console.WriteLine("Array contents: " + item);
+                            Console.WriteLine("Current total is:" + sum);
+                        }
+                   
+                    }
+                    Console.WriteLine();
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error reading file...maybe the bacon got it?");
+            }
+        }
+
         private static void StreamReader2Example()
         {
             const string FILE_PATH = "../../Budget.csv";
+            ReadFromFile(FILE_PATH);
+            Console.ReadLine();
+        }
+
+        private static void ReadFromFile(string filePath)
+        {
+            try
+            {
+                using (StreamReader sr = new StreamReader(filePath))
+                {
+                    while (!sr.EndOfStream)
+                    {
+                        string line = sr.ReadLine();
+                        Console.WriteLine("Entire line: " + line);
+                        string[] contents = line.Split(',');
+                        Console.WriteLine("Array values:");
+                        foreach (string data in contents)
+                        {
+                            Console.WriteLine(data + " * ");
+
+                        }
+                        Console.WriteLine("\n");
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Read error: " + e.Message);
+            }
         }
 
         private static void StreamWriter2Example()
