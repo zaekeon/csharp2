@@ -12,6 +12,12 @@ namespace SystemIO
         static void Main(string[] args)
         {
 
+            //Binary writing/reading
+            WriteOutput();
+            DisplayInput();
+            BinaryWriterTest();
+
+            //text reading/writing
             WriteToCSV();
             ReadFromCSV();
 
@@ -37,6 +43,72 @@ namespace SystemIO
 
 
 
+        }
+
+
+
+        private static void WriteOutput()
+        {
+            try
+            {
+                //create file and write to it with a BinaryWriter object.
+                using (BinaryWriter writer =  new BinaryWriter(File.Open(@"c:\projects\binary2.txt", FileMode.Create)))
+                {
+                    writer.Write(true);
+                    writer.Write('A');
+                    writer.Write(1.1m);
+                    writer.Write(2.2);
+                    writer.Write(3.3f);
+                    writer.Write(4);
+                    writer.Write("Hello");
+                    writer.Write("James");
+                    writer.Write("Bond");
+                    writer.Write(7);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        private static void DisplayInput()
+        {
+            const string FILE_PATH = @"c:\projects\binary2.txt";
+
+            try
+            {
+                using (BinaryReader reader = new BinaryReader(File.Open(FILE_PATH, FileMode.Open)))
+                {
+                    //read known formats in a known order
+                    Console.WriteLine(reader.ReadBoolean());
+                    Console.WriteLine(reader.ReadChar());
+                    Console.WriteLine(reader.ReadDecimal());
+                    Console.WriteLine(reader.ReadDouble());
+                    Console.WriteLine(reader.ReadSingle());
+                    Console.WriteLine(reader.ReadInt32());
+                    Console.WriteLine(reader.ReadString());
+                    Console.WriteLine(reader.ReadString());
+                    Console.WriteLine(reader.ReadString());
+                    Console.WriteLine(reader.ReadInt32());
+
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        private static void BinaryWriterTest()
+        {
+            const string FILE_PATH = @"c:\projects\binaryfile.txt";
+            using (BinaryWriter writer = new BinaryWriter(File.Open(FILE_PATH, FileMode.Create)))
+            {
+               writer.Write("ABC");
+               writer.Write(123);
+               
+            }
         }
 
         private static void WriteToCSV()
