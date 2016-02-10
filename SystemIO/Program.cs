@@ -12,12 +12,25 @@ namespace SystemIO
         static void Main(string[] args)
         {
 
+            //Binary Buffer Read
+            Console.WriteLine("Binary Buffer Read");
+            GenerateBinaryContent();
+            BinaryBufferRead();
+
+            //Randomly access/seek binary file
+            Console.WriteLine("Binary Seek");
+            BinarySeek();
+
+
             //Binary writing/reading
+            Console.WriteLine("Binary reading/writing");
             WriteOutput();
             DisplayInput();
             BinaryWriterTest();
 
+
             //text reading/writing
+            Console.WriteLine("Text reading/writing");
             WriteToCSV();
             ReadFromCSV();
 
@@ -45,6 +58,110 @@ namespace SystemIO
 
         }
 
+        private static void BinarySeek()
+        {
+            byte[] buffer = new byte[16];
+            try
+            {
+                using (FileStream fileStream = new FileStream(@"c:\projects\mybinarybuffer.dat", FileMode.Open))
+                {
+                    const int OFFSET = 8; // skip first two integers (8 bytes)
+                    fileStream.Seek(OFFSET, SeekOrigin.Begin);  //start at 3rd int.
+                    fileStream.Read(buffer, 0, buffer.Length); //fill the buffer
+                    ShowBufferContents(buffer);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error seeking binary file");
+            }
+        }
+
+        private static void BinaryBufferRead()
+        {
+            const string FILE_PATH = @"c:\projects\mybinarybuffer.dat";
+            const int BUFFER_SIZE = 16; //16 bytes - 4 bytes per integer
+
+            byte[] buffer = new byte[BUFFER_SIZE];
+            try
+            {
+                using(FileStream fileStream = new FileStream(FILE_PATH, FileMode.Open))
+                {
+                    int bytesRead = 0;
+                    int totalBytesRead = 0;
+                    //read data into byte buffer as long as data exists.
+                    while ((bytesRead = fileStream.Read(buffer,0,buffer.Length)) > 0)
+                    {
+                        totalBytesRead += bytesRead;
+                        ShowBufferContents(buffer);
+                        buffer = ResetBuffer((int)fileStream.Length, totalBytesRead);
+
+                        if (buffer == null)
+                            break;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("read error: " + e.Message);
+            }
+
+
+        }
+
+        private static void ShowBufferContents(byte[] buffer)
+        {
+            const int BYTES_PER_INT = 4; //1 integer = 4 bytes
+
+            //convert bytes into integers and display them.
+            for (int i = 0; i< buffer.Length; i+= BYTES_PER_INT)
+            {
+                int intValue = BitConverter.ToInt32(buffer, i);
+                Console.WriteLine(intValue + ", ");
+            }
+        }
+
+        private static byte[] ResetBuffer(int fileLength, int totalBytesRead)
+        {
+            byte[] buffer = null;
+            const int BUFFER_SIZE = 16;
+
+            //allocate space if data is left in file.
+            if (totalBytesRead + BUFFER_SIZE <= fileLength) {
+                buffer = new byte[BUFFER_SIZE];
+            }
+
+            else
+            {
+
+            
+               buffer = new byte[fileLength - totalBytesRead];
+            }
+            return buffer;
+
+        }
+
+
+        private static void GenerateBinaryContent()
+        {
+            const string FILE_PATH = @"c:\projects\mybinarybuffer.dat";
+
+            try
+            {
+                using (BinaryWriter writer =  new BinaryWriter(File.Open(FILE_PATH, FileMode.Create)))
+                {
+                    int[] numberArray = { 1, 2, 3, 4, 5, 6, 7, 2, 1 };
+                    for (int i = 0; i < numberArray.Length; i++)
+                        writer.Write(numberArray[i]);
+                }
+                
+            }
+
+            catch (Exception e)
+            {
+                Console.WriteLine("Error outputing binary content");
+            }
+        }
 
 
         private static void WriteOutput()
