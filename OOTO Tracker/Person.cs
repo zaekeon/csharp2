@@ -15,6 +15,8 @@ namespace OOTO_Tracker
         public Person(string firstName, string lastName)
         {
             _timeOff = new List<OOTODay>();
+            FirstName = firstName;
+            LastName = lastName;
         }
 
         public TimeSpan GetTotalTimeOff()

@@ -30,6 +30,9 @@ namespace OOTO_Tracker
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+
+           
+
             if (listBox.SelectedIndex == -1)
             {
                 System.Windows.MessageBox.Show("No users selected");
@@ -115,8 +118,18 @@ namespace OOTO_Tracker
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
+            if (String.IsNullOrEmpty(textBox.Text))
+            {
+                MessageBox.Show("Enter a first name");
+                return;
+            }
+            if (String.IsNullOrEmpty(textBox1.Text))
+            {
+                MessageBox.Show("Enter a last name");
+                return;
+            }
 
-            AllUsers._users.Add(new Person(textBox1.Text, textBox.Text));
+            AllUsers._users.Add(new Person(textBox.Text, textBox1.Text));
             listBox.Items.Add(textBox.Text + " " + textBox1.Text);
             textBox1.Clear();
             textBox.Clear();
@@ -142,6 +155,14 @@ namespace OOTO_Tracker
             tempPerson = AllUsers._users[listBox.SelectedIndex];
 
             lblTotalTime.Content = "Total Time OOTO: " + tempPerson.GetTotalTimeOff();
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (var person in AllUsers._users)
+            {
+               bool success =  OOTOWriter.SavePerson(person, @"c:\projects\" + person.FirstName + person.LastName + ".json");
+            }
         }
     }
 }
