@@ -12,6 +12,10 @@ namespace SystemIO
         static void Main(string[] args)
         {
 
+            //reader exercise
+            Console.WriteLine("Reader Exercries");
+            ExReader();
+
             //Binary Buffer Read
             Console.WriteLine("Binary Buffer Read");
             GenerateBinaryContent();
@@ -369,6 +373,27 @@ namespace SystemIO
             }
         }
 
+        private static void ExReader()
+        {
+            string filePath = @"c:\projects\mytext.txt";
+
+            try
+            {
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    string line;
+
+                    line = reader.ReadLine();
+
+                    Console.WriteLine(line);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error reading: " + filePath);
+            }
+
+        }
         private static void StreamReaderExample()
         {
             //streams
